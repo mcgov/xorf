@@ -1,4 +1,4 @@
-chrxor
+xorf
 ======
 
 Some functions for super enciphering (xor) with an arbitrary amount of keys.
