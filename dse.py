@@ -19,4 +19,4 @@ if __name__ == "__main__":
     ret_str = ""
     for i in result:
     	ret_str += chr(i)
-    print(ret_str)
+    sys.stdout.write(ret_str)

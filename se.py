@@ -30,4 +30,4 @@ if __name__ == "__main__":
     inp = sys.stdin.read()
     enciphered = se( inp, sys.argv )
     #print stgone
-    sys.stdout.write( print_as_hex(enciphered) + '\n')
+    sys.stdout.write(print_as_hex(enciphered))
