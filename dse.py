@@ -3,8 +3,6 @@ import sys
 #de-super-encipher
 #author: mcgov   contact mgmcgove@buffalo.edu
 
-instr = sys.stdin.read()
-
 def dse( inp ):
 	"""de-super-encipher an output from se.py. Pipe input from stdin, args should be the keys."""
 	#print sys.argv[1]
@@ -15,7 +13,10 @@ def dse( inp ):
 		inp = x.chrxor( inp, sys.argv[i], x.int_array, None, x.ascii_str, None, x.integer, x.ascii_ord) 
 	return inp
 
-result =  dse(instr)
-for i in result:
-	print chr(i),
-print ''
+if __name__ == "__main__":
+    instr = sys.stdin.read()
+    result =  dse(instr)
+    ret_str = ""
+    for i in result:
+    	ret_str += chr(i)
+    print(ret_str)

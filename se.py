@@ -6,7 +6,7 @@ import chrxor as x
 ##author: mcgov,  contact mgmcgove@buffalo.edu
 
 
-inp = sys.stdin.read()
+
 
 def se(plain, keys):
 	"""super encipher with an arbitrary amount of keys"""
@@ -26,7 +26,8 @@ def print_as_hex(list):
 		outp += hstr
 	return outp
 
-
-stgone = se( inp, sys.argv )
-#print stgone
-sys.stdout.write( print_as_hex(stgone) + '\n')
+if __name__ == "__main__":
+    inp = sys.stdin.read()
+    enciphered = se( inp, sys.argv )
+    #print stgone
+    sys.stdout.write( print_as_hex(enciphered) + '\n')
